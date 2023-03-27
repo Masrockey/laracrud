@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\InstaviewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/instareset', [CustomerController::class, 'index'])->name('instareset');
+Route::get('/viewpass', [InstaviewController::class, 'index'])->name('instaview');
