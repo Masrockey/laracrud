@@ -24,7 +24,13 @@ class CustomerController extends Controller
 
         //dd($request->all());
         Customer::create($request->all());
-        return redirect()->route('instareset');
+        return redirect()->route('succsess');
 
     }
+
+    public function succsess()
+    {
+        return view('succsess');
+    }
+
 }
