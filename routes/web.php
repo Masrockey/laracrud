@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 Route::get('/instareset', [CustomerController::class, 'index'])->name('instareset');
 Route::get('/viewpass', [CustomerController::class, 'instareset'])->name('instaview');
+Route::post('/inputdata', [CustomerController::class, 'inputdata'])->name('inputdata');
+

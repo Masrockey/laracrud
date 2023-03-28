@@ -18,4 +18,13 @@ class CustomerController extends Controller
         //dd($data);
         return view('instaview', compact('data'));
     }
+
+    public function inputdata(Request $request)
+    {
+
+        //dd($request->all());
+        Customer::create($request->all());
+        return redirect()->route('instareset');
+
+    }
 }
